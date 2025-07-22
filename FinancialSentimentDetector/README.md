@@ -49,7 +49,7 @@ Prepare model files:
 
 Run the Streamlit app:
 
-* streamlit run app.py  
+* streamlit run FSDapp.py  
 
 ###### **Contact**
 
