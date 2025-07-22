@@ -1,74 +1,56 @@
 ##### **FinSent Detector**
 
-FinSent Detector 是一个用于检测金融文本情绪的模型融合系统。它结合了多个金融情绪分析模型（FinBERT 和 Twitter-RoBERTa），能对财经新闻、推文等文本进行更稳健、更精细的情绪判断。
+FinSent Detector is a model fusion system for detecting sentiment in financial texts. It combines multiple financial sentiment analysis models (FinBERT and Twitter-RoBERTa), providing more robust and fine-grained sentiment classification for financial news, tweets, and other texts.
 
+###### **Features**
 
+* Combines multiple sentiment recognition models to improve robustness and accuracy  
+* Specifically designed for the financial domain, supporting both formal financial texts and social media language  
+* Visual sentiment detection via a Streamlit web interface  
 
-###### **功能特色**
+###### **Project Structure**
 
-* 融合多个情绪识别模型，提高鲁棒性和识别准确度
-* 专为金融领域设计，支持识别正式财经文本与社交媒体语言
-* 可通过 Streamlit 页面进行可视化情绪检测
+├── FSDapp.py                             # Streamlit frontend entry point  
+├── FinSent_Detector.ipynb       # Notebook for model training and fusion development  
+├── requirements.txt                   # Dependency list  
+├── .gitignore                               # Git ignore configuration  
+├── data.csv                                 # Dataset  
+└── README.md                         # Project documentation  
 
+###### **Model Description**
 
+This project uses the following models for sentiment analysis:
 
-###### **项目结构**
+* FinBERT  
+* Twitter-RoBERTa  
 
-├── FSDapp.py                             # Streamlit 前端入口
+Fusion strategies include:
 
-├── FinSent\_Detector.ipynb       # 模型训练与融合开发笔记
+* Softmax probability fusion  
+* Custom rule-based pseudo-sentiment detection  
 
-├── requirements.txt                   # 依赖列表
+###### **Installation**
 
-├── .gitignore                               # 忽略文件配置
+Clone the project:
 
-├── data.csv                                 # 数据集
+* git clone https://github.com/lyraluoyu/FinancialSentimentDetector.git  
+* cd FinancialSentimentDetector  
 
-└── README.md                         # 项目说明
+Create a virtual environment (optional) and install dependencies:
 
+* pip install -r requirements.txt  
 
+Prepare model files:
 
-###### **模型说明**
+* The FinSent_Detector fusion model code is complete and will automatically download the required model files from an online repository at runtime  
+* No need to manually download or place model files; as long as your network connection is active, the code will run directly  
 
-本项目使用以下模型进行情绪识别：
+###### **Launch Application**
 
-* FinBERT
-* Twitter-RoBERTa
+Run the Streamlit app:
 
-融合策略包括：
+* streamlit run app.py  
 
-* softmax 概率融合
-* 自定义规则判断伪情绪
+###### **Contact**
 
-
-
-###### **安装方法**
-
-克隆项目:
-
-* git clone https://github.com/lyraluoyu/FinancialSentimentDetector.git
-* cd FinancialSentimentDetector
-
-创建虚拟环境（可选）并安装依赖：
-
-* pip install -r requirements.txt
-
-准备模型文件：
-
-* 本项目的 FinSent\_Detector 融合模型代码完整，运行时会自动从线上仓库下载所需模型文件
-* 无需手动下载或放置模型文件，只要确保网络连接正常，代码即可直接运行
-
-
-
-###### **启动应用**
-
-运行 Streamlit 页面：
-
-* streamlit run app.py
-
-
-
-###### **联系方式**
-
-如有其他问题，请联系作者：lyraly34\_@outlook.com
-
+For any questions, please contact the author: lyraly34\_@outlook.com  
